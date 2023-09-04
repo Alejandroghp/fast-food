@@ -1,0 +1,43 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-card>
+  <ion-card-content>
+    <!-- Utiliza la etiqueta <ion-img> con una clase CSS personalizada -->
+    <ion-img class="centrada" src="assets/icon/imagen.png" alt="Imagen"></ion-img>
+  </ion-card-content>
+</ion-card>
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Apellidos</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+  <ion-content>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <ion-content>
+      <ion-item>
+        <ion-label position="floating">Confirmar Contraseña</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+
+    
+
+    <ion-button [routerLink]="['/inicio']">Registrate</ion-button> 
+    <ion-button [routerLink]="['/login']">Iniciar Sesion</ion-button>
+</ion-content>
+

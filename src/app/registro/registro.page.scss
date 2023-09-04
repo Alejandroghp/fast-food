@@ -1,0 +1,12 @@
+.centrada {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 50%; /* Asegura que la imagen ocupe todo el espacio disponible */
+    max-width: 50%; /* Evita que la imagen se extienda más allá de su tamaño original */
+  }
+  /* Aplica un fondo de color verde a toda la página o componente */
+ion-content {
+    --ion-background-color: blue;
+  }
+  
