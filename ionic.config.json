@@ -1,0 +1,8 @@
+{
+  "name": "FastFood",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "0fd27d83"
+}
