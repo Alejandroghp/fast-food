@@ -1,43 +1,34 @@
-
-
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title color="primary">Registro</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        Volver
+      </ion-button>
+      <ion-buttons slot="end">
+        <ion-button>Sign up</ion-button>
+      </ion-buttons>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-card>
-  <ion-card-content>
-    <!-- Utiliza la etiqueta <ion-img> con una clase CSS personalizada -->
-    <ion-img class="centrada" src="assets/icon/imagen.png" alt="Imagen"></ion-img>
-  </ion-card-content>
-</ion-card>
+
+
 <ion-content>
-  <ion-item>
-    <ion-label position="floating">Nombre</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Apellidos</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Correo</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
   <ion-content>
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-    <ion-content>
-      <ion-item>
-        <ion-label position="floating">Confirmar Contraseña</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
+    <div id="header">
+      <h1>Login</h1>
+      <img src="assets/icon/2.png">
+    </div>
 
-    
-
-    <ion-button [routerLink]="['/inicio']">Registrate</ion-button> 
-    <ion-button [routerLink]="['/login']">Iniciar Sesion</ion-button>
-</ion-content>
-
+    <form id="#form">
+      <app-input placeholder="Hotmail"></app-input>
+      <app-input placeholder="Nombre"></app-input>
+      <app-input placeholder="Apellidos"></app-input>
+      <app-input type="password" placeholder="Contraseña"></app-input>
+      <app-input type="password" placeholder=" Confirmar contraseña"></app-input>
+      <ion-button expand="block" shape="round" [routerLink]="['/inicio']">Registrate</ion-button>
+      <ion-button expand="block" shape="round" [routerLink]="['/login']">Inicia Sesion</ion-button>
+    </form>
+  </ion-content>   

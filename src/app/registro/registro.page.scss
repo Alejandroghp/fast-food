@@ -1,12 +1,42 @@
-.centrada {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    height: 50%; /* Asegura que la imagen ocupe todo el espacio disponible */
-    max-width: 50%; /* Evita que la imagen se extienda más allá de su tamaño original */
+ion-toolbar {
+  --background: #f5f5f5;
+
+}
+ion-content{
+  --blackground: #f5f5f5;
+
+  #header{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+     h1{
+        font-weight: 700;
+        font-size: 26px;
+        color: #010100;
+        margin-bottom: 15%;
+     }
+     img{
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+        border: 8px solid #ffffff;
+     }
   }
-  /* Aplica un fondo de color verde a toda la página o componente */
-ion-content {
-    --ion-background-color: blue;
+
+  #form{
+     margin-top: 15px;
+     padding-left: 30px;
+     padding-right: 30px;
+
+     ion-button{
+        margin-top: 35px;
+        height: 48px;
+        font-size: 18px;
+        text-transform: initial ;
+        border-radius: 50px;
+        box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);
+        --box-shadow: none;
+     }
   }
-  
+}
