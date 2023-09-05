@@ -7,28 +7,28 @@
         </ion-buttons>
         Volver
       </ion-button>
-      <ion-buttons slot="end">
-        <ion-button>Sign up</ion-button>
-      </ion-buttons>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>Sign up</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
-  <ion-content>
-    <div id="header">
-      <h1>Login</h1>
-      <img src="assets/icon/2.png">
-    </div>
+  <div id="header">
+    <h1>Login</h1>
+    <img src="assets/icon/2.png">
+  </div>
 
-    <form id="#form">
-      <app-input placeholder="Email"></app-input>
-      <app-input type="password" placeholder="Contraseña"></app-input>
-      <ion-button expand="block" shape="round" [routerLink]="['/inicio']">Inicia Sesion</ion-button>
-    </form>
-  </ion-content>    
-
-
-
-  
+  <form id="form">
+    <ion-item>
+      <ion-input type="email" [(ngModel)]="username" placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="password" placeholder="Contraseña"></ion-input>
+    </ion-item>
+    <ion-button expand="full" shape="round" (click)="login()">Inicia Sesión</ion-button>
+    <!-- Mostrar el mensaje de error -->
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </form>
+</ion-content>

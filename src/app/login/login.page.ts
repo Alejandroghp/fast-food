@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { initializeApp } from 'firebase/app';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 @Component({
   selector: 'app-login',
@@ -9,24 +7,20 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage {
-  email: string = '';
+  username: string = '';
   password: string = '';
+  errorMessage: string = '';
 
   constructor(private router: Router) {}
 
-//async login() {
-  //  try {
-    //  const userCredential = await firebase.auth().signInWithEmailAndPassword(
-      //  this.email,
-      //  this.password
-      //);
-      // Inicio de sesión exitoso, redirige al usuario a otra página.
-     // this.router.navigate(['/home']);
-   // } catch (error) {
-      // Maneja errores durante el inicio de sesión.
-      //const errorCode = error.code;
-     // const errorMessage = error.message;
-      //console.error(`Error al iniciar sesión: ${errorCode} - ${errorMessage}`);
-   // }
- //// }
+  login() {
+    // Verifica si las credenciales coinciden con el usuario específico.
+    if (this.username === 'ped.guzman@duocuc.cl' && this.password === '1234') {
+      // Las credenciales son válidas, redirige al usuario a la página de inicio.
+      this.router.navigate(['/inicio']); // Ajusta la ruta según tu estructura de navegación.
+    } else {
+      // Las credenciales son inválidas, muestra un mensaje de error al usuario.
+      this.errorMessage = 'Credenciales incorrectas. Por favor, inténtalo de nuevo.';
+    }
+  }
 }
